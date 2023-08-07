@@ -2,3 +2,10 @@
     margin-bottom: 5%;
     margin-left: 10%;
 }
+
+.sombra {
+    box-shadow: 5px 4px 9px 1px rgb(128, 0, 0);
+}
+
+
+

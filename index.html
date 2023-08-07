@@ -14,13 +14,14 @@
     <h1>Juego de adivinar numero</h1>
     <h2>Cambiar dificultad antes de jugar</h2>
     <select id="dificultad">
+        <option>----</option>
         <option value="facil">Fácil (1-10)</option>
-        <option value="normal" selected>Normal (1-100)</option>
+        <option value="normal">Normal (1-100)</option>
         <option value="dificil">Difícil (1-1000)</option>
     </select>
     <p>Intenta adivinar el número secreto:</p>
     <input type="number" id="numeroIngresado" placeholder="Ingrese numero">
-    <button onclick="adivinaNumero()">Adivinar</button>
+    <button class="btn btn-success" onclick="adivinaNumero()">Adivinar</button>
     <p id="resultado"></p>
     <p>Historial de intentos:</p>
     <ul id="historial"></ul>

@@ -66,4 +66,7 @@ const dificultades = {
   document.getElementById('dificultad').addEventListener('change', function () {
     juego.dificultad = this.value;
     juego.numeroSecreto = generarNumeroSecreto(juego.dificultad);
+    juego.historialIntentos = []; // Limpia el historial de intentos
+    document.getElementById('resultado').textContent = ''; // Limpiar el resultado anterior
+    mostrarHistorial(); // Limpiar el historial de intentos
   });
