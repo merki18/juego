@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinar Número</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body class="juego">
+    <h1>Juego de adivinar numero</h1>
+    <h2>Cambiar dificultad antes de jugar</h2>
+    <select id="dificultad">
+        <option value="facil">Fácil (1-10)</option>
+        <option value="normal" selected>Normal (1-100)</option>
+        <option value="dificil">Difícil (1-1000)</option>
+    </select>
+    <p>Intenta adivinar el número secreto:</p>
+    <input type="number" id="numeroIngresado" placeholder="Ingrese numero">
+    <button onclick="adivinaNumero()">Adivinar</button>
+    <p id="resultado"></p>
+    <p>Historial de intentos:</p>
+    <ul id="historial"></ul>
+    <p>Mejor puntaje: <span id="mejorPuntaje">-</span></p>
+  
+
+    <script src="juego.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+</body>
+
