@@ -38,15 +38,16 @@ function adivinaNumero() {
     adivinado = true;
     Swal.fire({
       title: '¡Felicitaciones!',
-      text: `¡Adivinaste el número secreto (${numeroIngresado})!`,
+      text: `¡Adivinaste el número secreto (${numeroIngresado}) en ${juego.intentos} intentos!`,
       icon: 'success'
     });
-    document.getElementById('resultado').textContent = `¡Felicitaciones! Adivinaste el número en ${juego.intentos} intentos.`;
+    document.getElementById('resultado').textContent = `Adivinaste el número en ${juego.intentos} intentos.`;
     juego.historialIntentos.push(`Intento ${juego.intentos}: ${numeroIngresado}`);
     if (juego.intentos < juego.mejorPuntaje) {
       juego.mejorPuntaje = juego.intentos;
       document.getElementById('mejorPuntaje').textContent = juego.mejorPuntaje;
       localStorage.setItem('mejorPuntaje', juego.mejorPuntaje);
+      document.getElementById('resultado').textContent = `Adivinaste el número en ${juego.intentos} intentos. NUEVO RECORD!`;
     }
     mostrarHistorial();
   } else if (numeroIngresado < juego.numeroSecreto) {

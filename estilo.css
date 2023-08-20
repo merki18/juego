@@ -3,9 +3,14 @@
     margin-left: 10%;
 }
 
-.sombra {
-    box-shadow: 5px 4px 9px 1px rgb(128, 0, 0);
+.boton {
+    margin-left: 10px;
 }
+
+.sombra:hover {
+    box-shadow: 0px 0px 50px -10px #000000
+}
+
 
 
 
